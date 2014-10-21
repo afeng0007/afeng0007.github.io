@@ -1,1 +1,23 @@
-pygments: true
+markdown: kramdown
+highlighter: pygments
+permalink: blog/:year/:month/:day/:title.html
+paginate: 6
+paginate_path: page/:num
+
+blog:
+    name:                                                # afeng0007的技术博客
+    description:                                         # 专注于互联网和流媒体技术
+    title:                                               # afeng0007
+    url:                                                 # http://afeng0007.github.io
+    duoshuo:                                             # 多说ID
+    tongji:                                              # 百度统计ID
+    qiniu:                                               # 七牛云地址
+author:
+    name:                                                # afeng0007
+    email:                                               # afeng0007@gmail.com
+    weibo:                                               # 微博地址
+    github:                                              # https://github.com/afeng0007
+    logo:                                                # logo地址
+    douban:
+        name:                                            # 豆瓣地址名称
+        key:                                             # 豆瓣API Key
