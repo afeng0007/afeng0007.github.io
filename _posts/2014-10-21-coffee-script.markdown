@@ -5,13 +5,14 @@ date:   2014-10-21 15:01:00
 categories: 读书笔记
 ---
 
-#### 简介：   
+#### 简介：
 coffee-script是能够将编写的代码直接转换成javascript的中间语言，和coffee-script类似的还有microsoft的type-script. 
+
 #### Javascript的不足：
-javascript因为历史的原因有以下的遗留问题：
-    a. 比较奇怪的继承机制：Javascript在出现的最初是没有面向对象的。javascript因为这个原因并不是原生面向对象的，而是通过比较奇怪的原型链的方式进行继承。使用coffee-script可以比较容易进行继承。   
-    b. Javascript编写起来比较繁琐：因为Javascript被设计成为单线程操作。在实现同一个方法会有非常多的回调函数来处理。因此编写Javascript会比较费事。coffeescript对Javascript中比较繁琐的部分进行了简化。使用coffeescript可以提高编码效率。   
-    c.Javascript本身是弱类型的语言，这样就很难在编码阶段及时发现编码中存在的问题。只有经过充分的测试才能保证代码的正确性，这样就比强类型语言更容易出错。而有的中间语言（type-script）可以进行编码检查。这样就基本保证了编码的正确性，但是coffeescript并没有这样的类型检查功能。   
+javascript因为历史的原因有以下的遗留问题：   
+1. 比较奇怪的继承机制：Javascript在出现的最初是没有面向对象的。javascript因为这个原因并不是原生面向对象的，而是通过比较奇怪的原型链的方式进行继承。使用coffee-script可以比较容易进行继承。   
+2. Javascript编写起来比较繁琐：因为Javascript被设计成为单线程操作。在实现同一个方法会有非常多的回调函数来处理。因此编写Javascript会比较费事。coffeescript对Javascript中比较繁琐的部分进行了简化。使用coffeescript可以提高编码效率。   
+3. Javascript本身是弱类型的语言，这样就很难在编码阶段及时发现编码中存在的问题。只有经过充分的测试才能保证代码的正确性，这样就比强类型语言更容易出错。而有的中间语言（type-script）可以进行编码检查。这样就基本保证了编码的正确性，但是coffeescript并没有这样的类型检查功能。   
 
 #### coffee-script的语法：   
 a. 函数：函数通过一组可选的圆括号包裹的参数，一个箭头，一个函数体来定义。一个典型的函数。
