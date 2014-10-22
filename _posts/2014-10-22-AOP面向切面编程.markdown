@@ -1,0 +1,16 @@
+---
+layout: post
+title: "AOP面向切面编程"
+date: 2014-10-21 16:00:00
+categories: 读书笔记
+---
+
+AOP的基本概念：
+1. aspect(切面):
+2. jointpoint(连接点):
+3. advice(处理逻辑):
+4. pointcut(切点);
+5. introduction:允许添加新的属性和方法到类中。
+6. target(目标类):
+7. proxy(代理类):
+8. weaving(插入):
