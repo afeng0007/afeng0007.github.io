@@ -17,9 +17,15 @@ m3u8包含最多两级playlist，文件根据是否支持自适应码率切换�
 
 ##### 一些公共的tag：
 1. EXTM3U:用来标记本文件是一个m3u8。
+
 2. EXT-X-INDEPENDENT-SEGMENTS: 用来标识本playlist文件指向的媒体文件的解码不需要引用其它媒体文件的信息。如果本tag在master playlist中出现则表示本路流所有的媒体文件都不应用其它媒体文件的信息。
+
 3. EXT-X-START: 用来标识开始播放媒体文件的点。如果本tag在master文件中，则标识media playlist的开始点。如果在media playlist中，则其它相同master playlist中的其他media playlist也应该有这个tag并且表示的是同一个时间。子标签有：TIME-OFFSET，和PRECISE
+
 4. EXT-X-VERSION: 用来标识本playlist所遵循的协议的版本号。
+
+5. EXT-X-INDEPENDENT-SEGMENTS:用来用来指定在media playlist中所有的媒体文件是相互独立的，不依赖于其它的媒体文件。
+
 
 ##### master playlist中特有的tag：
 1. EXT-X-MEDIA: 用来标识多语言,多字幕或者关闭字幕（closed caption）的流。
@@ -32,18 +38,22 @@ m3u8包含最多两级playlist，文件根据是否支持自适应码率切换�
     f. NAME: 可读性好的名称。
     g. DEFAULT: 本流是否是默认（音频，字幕）流。
     h. AUTOSELECT: 本流是否可以自动选择。
-    i. INSTREAM-ID: 
-    j. CHARACTERISTICS
+    i. INSTREAM-ID: 只有在TYPE是CLOSED CAPTION的时候才可以出现，而且只能是`CC1`, `CC2`, `CC3`, `CC4`这四个值的其中之一。
+    j. CHARACTERISTICS: 
 
-2. EXT-X-STREAM-INF: 
+2. EXT-X-STREAM-INF: 在master playlist中指定一条多码率的流。有以下几种属性可以设置：
+    a. BANDWIDTH: 指定带宽。
+    b. CODECS: 指定编码格式。
+    c. RESOLUTION: 指定视频的长宽比。
+    d. AUDIO: 指定EXT-X-MEDIA中的audio的group-id
+    e. VIDEO: 指定EXT-X-MEDIA中的video的group-id
+    f. SUBTITLES: 指定EXT-X-MEDIA中的subtitle的group-id
+    g. CLOSED-CAPTIONS:指定EXT-X-MEDIA中的closed caption中的group-id
 
-3. EXT-X-I-FRAMES-ONLY:
+3. EXT-X-MAP: 在实际工作中没有遇到过，但是根据协议是用来指定PAT PMT或者Webvtt头的， EXT-X-MAP能指定URI和BYTERANGE。
 
-4. EXT-X-MAP:
-
-5. EXT-X-I-FRAME-STREAM-INF:
-
-6. EXT-X-INDEPENDENT-SEGMENTS:
+4. EXT-X-I-FRAME-STREAM-INF: 用来指定包含I帧的media playlist.在EXT-X-STREAM-INF中指定的tag，除了AUDIO, SUBTITLE和CLOSED-CAPTIONS以外都能用在这个tag中。除此之外本TAG还有以下属性可以设置：
+    a. URI: 用来指定I frame stream的URI。
 
 ##### media playlist中特有的tag:
 1. EXT-X-BYTERANGE: 用来标识特定的媒体范围，从而达到重用媒体文件的作用，常见的一种方式是指定I-frame在媒体中的位置来实现使用相同的media 文件来实现FF和REV功能。
@@ -61,3 +71,7 @@ m3u8包含最多两级playlist，文件根据是否支持自适应码率切换�
 7. EXT-X-PLAYLIST-TYPE: 本tag用来在playlist文件中标识易变的信息类型有event和vod。
 
 8. EXT-X-ENDLIST: 用来标识media文件的结尾。一般用于vod文件或者live流的结尾。
+
+9. EXT-X-I-FRAMES-ONLY: 用来指定media playlist中的媒体文件都是I-frame。
+
+
