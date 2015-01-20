@@ -1,0 +1,43 @@
+Ember.js:
+
+Concepts:
+1. templetes:
+  templete is writen in the handlebars templete language,each template is backed by a model, and the templete automatically updates itself if the model changes.
+    templete contains:
+    1. Expressions:
+    2. Outlets:
+    3. Components:
+
+2. routes:
+  The router translates a URL into a series of nested templetes. each backed by a model. as the templates or models being shown to the user change, Ember automatically keeps the URL in the browser's address bar up-to-date.
+
+3. components:
+  A component is a custom HTML tag whose behavior you implement using JavaScript and whose appearance you describe using Handlebars templates.
+
+4. models:
+  a model is an object that stores persitent state. Templates are responsible for displaying the model to the user by turning it into html.
+
+5. routes:
+  route is an object that tells the template which model it should display.
+
+6. controller:
+  A controller is a object that stores application state. A template can optionally have a controller in addition to a model, and can retrieve properties from both.
+
+
+The application:
+`App.ApplicationRoute`,  `App.ApplicationController`, `application`
+
+Simple routes:
+```
+App.Router.map(function){
+    this.route('favorites');
+    });
+```
+
+If your user navigates to `/favorites`. ember.js will look for these objects.
+`App.FavoritesRoute`,`App.FavoritesController`, `favorites`template.
+
+dynamic segments:
+If a route usersa dynamic segment, the route's model will be based on the value of that segment provided by the user.
+
+`App.PostRoute`, `App.PostController`, the `post` template.

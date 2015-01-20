@@ -1,0 +1,11 @@
+#### android的自动化测试：
+android的自动化测试主要包含以下几种工具：
+1. monkey: 这个工具是android SDK自带的工具，工具本身比较简单。就是一个事件发生器，可以模拟用户点击操作，key操作和手势操作。当发生错误的时候会退出。
+
+2. monkeyrunner: 这个工具也是android SDK自带的工具。是使用Python编写脚本来进行测试。工具本身可以录制脚本和回放脚本，方便进行功能测试和回归测试。
+
+3. Robotium:
+
+#### IOS的自动化测试：
+IOS的自动化测试主要通过UIAutomation
+

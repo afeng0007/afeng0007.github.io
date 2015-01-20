@@ -1,0 +1,119 @@
+HTML5元素定义为块元素：
+1. HTML5定了8个新的HTML语义元素。所有这些元素都是块级元素。
+header, section, footer, aside, nav, main, acticle, figure.
+
+2. 为HTML添加新元素，可以为HTML添加新元素，并为该元素定义样式。
+
+3. HTML新元素：
+<canvas>:
+  attributes:
+    height:画布高度
+    width:画布宽度
+<audio>
+  attributes:
+    autoplay:自动播放
+    controls:是否显示音频控件
+    loop: 是否在结束的时候重新开始播放
+    muted: 是否静音。
+    preload：网页加载的时候音频是否被加载以及如何被加载。
+    src: URL
+
+<video>
+  attributes：
+    autoplay: 是否在视频就绪以后马上开始播放.
+    controls: 是否显示控件。
+    height：视频播放器的高度。
+    loop： 是否循环播放。
+    muted：音频输出是否是静音。
+    poster：视频正在下载的时候显示的图像。
+    preload：是否预加载。
+    src：要播放视频的URL。
+    width：视频播放器的宽度。
+
+<source>
+
+<embed>
+  attributes:
+    height: 规定嵌入的高度。
+    src: 规定嵌入内容的URL。
+    type： 嵌入的内容的mimetype。
+    width： 嵌入的高度。
+<track>：除了视频和音频以外的文本轨
+  attributes：
+    default:
+    kind:
+    label:
+    src:
+    srclang:
+<datalist>:描述input中可能的值。
+
+<keygen>
+  attributes:
+    autofocus:
+    challenge:
+    disabled:
+    form:
+    keytype:
+    name:
+
+<output>
+  attributes:
+    for:
+    form:定义输入字段所属的一个或者多个表单。
+    name:
+
+语义和结构元素：
+<article>
+  attributes:
+
+<aside>
+  attributes:
+
+<bdi>
+<command>
+<detail>
+<dialog>
+<summary>
+<figure>
+<figcaption>
+<footer>
+<header>
+<mark>
+<meter>
+<nav>
+<progress>
+<ruby>
+<rt>
+<rp>
+<section>
+<time>
+<wbr>
+
+已经移除的元素：
+<acronym>
+<applet>
+<basefont>
+<big>
+<center>
+<dir>
+<font>
+<frame>
+<frameset>
+<noframes>
+<strike>
+<tt>
+
+Canvas和SVG之间的不同之处：
+Canvas:
+依赖于分辨率
+不支持事件处理器
+弱的文本渲染能力。
+能以.png或者.jpg格式存储结果图像。
+最适合像素密集型游戏其中许多对象会被频繁重绘。
+
+SVG：
+不依赖于分辨率
+支持事件处理器。
+适合带有大型渲染区域的应用程序。
+复杂度高会减慢渲染速度。
+不适合游戏应用。

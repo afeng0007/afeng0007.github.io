@@ -1,0 +1,32 @@
+交互的最佳实践：
+1. 设计有效的导航系统。
+* Planning Screens and Their Relationships.
+* Planning for Multiple Touchscreen Size.
+* Planning for Descendant and lateral Navigation.
+* Providing Ancestral and Temporal Navigation.
+* Putting it All Together: Wireframing the Example APP.
+
+
+2. 实现有效的导航系统。
+
+3. 提醒用户。
+
+4. 添加查找功能。
+
+5. 使APP的内容可以被Google搜索到。
+
+Performance Tips:
+
+There are two basic rules for writing efficient code:
+* Don't work that you don't need to do.
+* Don't allocate memory if you can avoid it.
+
+If you have a method returning a string, and you know that its result will always be appended to a StringBuffer anyway, change your signture and implementation so that the function does the append directly, instead of creating a short-lived temporary object.
+
+When extracting strings from a set of input data, try to return a substring of the original data. instead of creating a copy. you will create a new String Object , butit will share the char[] with the data. 
+
+An array of ints is a much better than  an array of Integer objects.
+
+If you don't need to access an object's fields, make your method static, invocations will be about 15% ~20% faster. It's also good practice, because you can from the method signature that calling the method can't alter the object's state.
+
+
