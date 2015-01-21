@@ -1,0 +1,41 @@
+### nodejs:
+nodejs是运行在服务器端的Javascript环境。它能够处理互联网用户的http请求。可以作为Web服务器来处理动态页面。
+### mongodb:
+mongodb是文档型数据库的代表。作为非关系型数据库，有速度快，结构灵活的优点。也有不支持事务处理的一些弊端。在工作中需要根据需要选择合适的数据库。
+
+#### CommonJs规范：
+CommonJs是服务器模块的规范，每个单独的文件是一个模块。每个模块都是单独的作用域，在模块内部定义的变量。无法被其他模块获取。输出模块变量的方法是使用：model.exports。使用require方法来加载模块。可以是相对路径也可以是绝对路径。如果没有路径则认为加载的是核心模块。如果加载的是一个目录，nodejs会首先寻找package.json文件，加载main属性中提到的模块，否则就寻找index.js文件。
+
+#### CommonJS和AMD：
+CommonJS规范加载模块是同步的，只有加载完成才能执行后面的操作。AMD规范是异步加载，允许指定回调函数。相对来说CommonJS规范适合在服务器环境中使用，而AMD规范适合在浏览器环境中使用。
+
+#### npm：
+npm是nodejs package manager是nodejs模块管理系统的简称，npm因为其强大的包管理能力不仅仅用于服务器端nodejs的包管理，而且有很多浏览器端的包管理系统也是基于npm来使用的。比较著名的有bower，grunt-cli，yo等。作为开发者可以自由得发布包。npm上比较有名的包有：express, pm2, coffee-script, async，underscore，mongoose等。
+
+#### nodeJS模块介绍：
+1. restify：restify包类似于express，提供用户访问的能力，但是相较于express更加简洁，主要用户构建RESTIFY服务。
+
+2. async:async为nodejs解决javascript中过多异步回调而引起的代码混乱问题。处理流程控制。async不仅能用在服务器端也能用在浏览器端，详情见[async github](https://github.com/caolan/async)主要使用的流程控制方法有：`auto`, `series`, `parallel`, `parallelLimit`, `whilst`, `doWhilst`, `until`, `doUntil`, `forever`, `waterfall`, `compose`, `seq`, `applyEach`, `applyEachSeriaes`, `queue`, `priorityQueue`, `cargo`, `auto`, `retry`, `iterator`, `apply`, `nextTick`, `times`, `timeSeries`。
+
+3. fast-json-patch:rfc规范，用来定义更新操作的json语法。有兴趣可以查看：[fast-json-patch](https://tools.ietf.org/html/rfc6902)。
+
+4. bunyan：为nodejs提供log支持，能够将log保存成为json格式方便处理。
+
+5. imagemagick: nodejs中用于处理图片的包。
+
+6. later:类似于cron。用来处理计划任务。
+
+7. mongoose:mongodb的nodejs插件。通过加入schema概念，使mongodb更加容易使用。
+
+8. moment:时间格式输出方面的处理。
+
+9. nodemailer:使用nodejs来发送邮件的插件。
+
+10. request:nodejs发起http请求的插件。
+
+11. socket.io:处理websocket方面的插件。
+
+
+#### reference：
+
+[CommonJS规范](http://javascript.ruanyifeng.com/nodejs/commonjs.html)
